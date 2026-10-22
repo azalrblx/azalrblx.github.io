@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="AZAL Terms of Service, Classes and Partners, in English and Azerbaijani.">
+<meta name="description" content="AZAL Terms of Service, Classes, Partners, FAQ and social links, in English and Azerbaijani.">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>AZAL Policies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: a plain airline info page. Navy top bar, breadcrumb, document menu on the left, legal text on the right. Light only, on purpose. */
+/* Layout: a plain airline info page. Navy top bar, breadcrumb, document menu on the left, text on the right. Light only, on purpose. */
 :root {
   color-scheme: light;
   --navy: #003366;
@@ -34,7 +34,7 @@ a:hover { color: var(--navy); }
 .topbar { background: var(--navy); color: #fff; }
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; flex-wrap: wrap; }
 .topbar img { width: 172px; height: auto; display: block; }
-.topbar nav { display: flex; align-items: center; gap: 22px; font-size: 14px; flex-wrap: wrap; }
+.topbar nav { display: flex; align-items: center; gap: 20px; font-size: 14px; flex-wrap: wrap; }
 .topbar nav a { color: #d7e6f2; text-decoration: none; }
 .topbar nav a:hover, .topbar nav a[aria-current="page"] { color: #fff; text-decoration: underline; text-underline-offset: 5px; }
 .langs { display: flex; border: 1px solid #3d6a93; }
@@ -42,11 +42,12 @@ a:hover { color: var(--navy); }
 .langs button[aria-pressed="true"] { background: #fff; color: var(--navy); }
 
 .titlebar { background: var(--panel); border-bottom: 1px solid var(--rule); }
-.titlebar .wrap { padding-block: 18px 22px; }
+.titlebar .wrap { padding-block: 18px 20px; }
 .crumbs { font-size: 13px; color: var(--sub); margin: 0 0 6px; }
 .crumbs a { color: var(--sub); }
 .titlebar h1 { margin: 0; font-size: 28px; font-weight: 700; color: var(--navy); line-height: 1.25; }
 .titlebar h1 small { font-size: 18px; font-weight: 400; color: var(--sub); margin-left: 8px; }
+.meta { margin: 6px 0 0; font-size: 13px; color: var(--sub); }
 
 .layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 48px; padding-block: 32px 56px; }
 @media (max-width: 760px) { .layout { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
@@ -87,6 +88,17 @@ tbody tr:nth-child(even) td { background: #fafbfc; }
 .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .dot { display: inline-block; width: 10px; height: 10px; margin-right: 6px; }
 
+.faq { margin: 0; border-top: 1px solid var(--rule); }
+.faq div { padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.faq dt { font-weight: 700; color: var(--navy); margin: 0 0 4px; }
+.faq dd { margin: 0; }
+
+.links { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.links li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 4px 20px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+@media (max-width: 520px) { .links li { grid-template-columns: minmax(0, 1fr); } }
+.links b { color: var(--navy); }
+.links span { color: var(--sub); font-size: 14px; display: block; }
+
 footer { background: var(--navy); color: #a9c3d8; font-size: 12.5px; }
 footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 </style>
@@ -97,10 +109,12 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
 <header class="topbar">
   <div class="wrap">
     <a href="#terms" data-doc="terms" aria-label="AZAL"><img src="data:image/png;base64,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" alt="Azerbaijan Airlines"></a>
-    <nav aria-label="Documents">
+    <nav aria-label="Pages">
       <a href="#terms" data-doc="terms" data-en="Terms of Service" data-az="Xidmət şərtləri">Terms of Service</a>
       <a href="#classes" data-doc="classes" data-en="Classes" data-az="Siniflər">Classes</a>
       <a href="#partners" data-doc="partners" data-en="Partners" data-az="Tərəfdaşlar">Partners</a>
+      <a href="#faq" data-doc="faq" data-en="FAQ" data-az="Suallar">FAQ</a>
+      <a href="#social" data-doc="social" data-en="Socials" data-az="Sosial şəbəkələr">Socials</a>
       <span class="langs" role="group" aria-label="Language">
         <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" id="lang-az" data-lang="az" aria-pressed="false">AZ</button>
@@ -112,7 +126,8 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
 <div class="titlebar">
   <div class="wrap">
     <p class="crumbs"><a href="#terms" data-doc="terms" data-en="Home" data-az="Ana səhifə">Home</a> / <span data-en="Passenger information" data-az="Sərnişin məlumatı">Passenger information</span> / <span id="crumb-current">Terms of Service</span></p>
-    <h1 id="page-title"><span id="title-main">Terms of Service</span> <small id="title-alt">Xidmət şərtləri</small></h1>
+    <h1><span id="title-main">Terms of Service</span> <small id="title-alt">Xidmət şərtləri</small></h1>
+    <p class="meta" data-en="Authorised by the Executive Council · Last updated 22 October 2026" data-az="İcra Şurası tərəfindən təsdiqlənib · Son yeniləmə: 22 oktyabr 2026">Authorised by the Executive Council · Last updated 22 October 2026</p>
   </div>
 </div>
 
@@ -127,13 +142,14 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li><a href="#terms" data-jump="3" data-en="Conduct" data-az="Davranış qaydaları">Conduct</a></li>
           <li><a href="#terms" data-jump="4" data-en="Flights and events" data-az="Uçuşlar və tədbirlər">Flights and events</a></li>
           <li><a href="#terms" data-jump="5" data-en="Purchases" data-az="Alışlar">Purchases</a></li>
-          <li><a href="#terms" data-jump="6" data-en="Staff and ranks" data-az="Heyət və rütbələr">Staff and ranks</a></li>
-          <li><a href="#terms" data-jump="7" data-en="Moderation and appeals" data-az="Moderasiya və şikayətlər">Moderation and appeals</a></li>
-          <li><a href="#terms" data-jump="8" data-en="Privacy and changes" data-az="Məxfilik və dəyişikliklər">Privacy and changes</a></li>
+          <li><a href="#terms" data-jump="6" data-en="Moderation and appeals" data-az="Moderasiya və şikayətlər">Moderation and appeals</a></li>
+          <li><a href="#terms" data-jump="7" data-en="Privacy and changes" data-az="Məxfilik və dəyişikliklər">Privacy and changes</a></li>
         </ul>
       </li>
       <li><a href="#classes" data-doc="classes" data-en="Classes" data-az="Siniflər">Classes</a></li>
       <li><a href="#partners" data-doc="partners" data-en="Partners" data-az="Tərəfdaşlar">Partners</a></li>
+      <li><a href="#faq" data-doc="faq" data-en="FAQ" data-az="Tez-tez verilən suallar">FAQ</a></li>
+      <li><a href="#social" data-doc="social" data-en="Socials" data-az="Sosial şəbəkələr">Socials</a></li>
     </ul>
     <p class="help" data-en="Questions? Open a ticket in the support channel of our Discord server." data-az="Sualınız var? Discord serverimizin dəstək kanalında bilet açın.">Questions? Open a ticket in the support channel of our Discord server.</p>
   </aside>
@@ -144,7 +160,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     <!-- ===================== TERMS ===================== -->
     <article id="terms">
       <div lang="en">
-        <p class="lead">By joining the AZAL Roblox group, our Discord server or any AZAL flight, you agree to these terms. If you do not agree, please do not take part. Last updated 22 October 2026.</p>
+        <p class="lead">Welcome to AZAL. By joining our Roblox group, our Discord server or any AZAL flight, you agree to these terms. If you do not agree, please do not take part.</p>
 
         <h2 id="en-t1">1. About AZAL</h2>
         <p>AZAL is a fan-run Roblox airline group inspired by Azerbaijan Airlines. We are not affiliated with, endorsed by or connected to Azerbaijan Airlines CJSC or any real airline.</p>
@@ -153,7 +169,6 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
         <ol class="clauses">
           <li><b>2.1</b><span>You must follow the <a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">Roblox Terms of Use</a> and <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms of Service</a>, including their age requirements.</span></li>
           <li><b>2.2</b><span>One account per person. Alternate accounts used to dodge punishments, farm rewards or vote twice will be banned along with the main account.</span></li>
-          <li><b>2.3</b><span><mark>Your Roblox and Discord accounts must be linked through our verification bot to hold any rank above Economy Class.</mark></span></li>
         </ol>
 
         <h2 id="en-t3">3. Conduct</h2>
@@ -162,19 +177,19 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li><b>3.1</b><span>Treat everyone with respect. No harassment, hate speech, discrimination or bullying.</span></li>
           <li><b>3.2</b><span>No NSFW, violent or shocking content in chat, names, avatars or images.</span></li>
           <li><b>3.3</b><span>No spamming, flooding, mass pinging or advertising without permission.</span></li>
-          <li><b>3.4</b><span>No exploiting, cheating or using bugs to your advantage. Report bugs to staff instead.</span></li>
-          <li><b>3.5</b><span>No impersonating staff, other members or real Azerbaijan Airlines employees.</span></li>
+          <li><b>3.4</b><span>No exploiting, cheating or using bugs to your advantage. Report bugs to us instead.</span></li>
+          <li><b>3.5</b><span>No impersonating Personnel, other members or real Azerbaijan Airlines employees.</span></li>
           <li><b>3.6</b><span>No sharing other people's personal information.</span></li>
           <li><b>3.7</b><span>Keep conversations in the right channels, and in English or Azerbaijani unless a channel says otherwise.</span></li>
-          <li><b>3.8</b><span>No trolling or deliberately disrupting flights, events or trainings.</span></li>
+          <li><b>3.8</b><span>No trolling or deliberately disrupting flights or events.</span></li>
         </ol>
 
         <h2 id="en-t4">4. Flights and events</h2>
         <ol class="clauses">
-          <li><b>4.1</b><span>Follow instructions from cabin crew, pilots and other staff during a flight. Their decision is final while the flight is running.</span></li>
-          <li><b>4.2</b><span>Stay in your assigned seat and class. Entering a cabin you have not paid or ranked for is not allowed.</span></li>
+          <li><b>4.1</b><span>Follow instructions from Personnel during a flight. Their decision is final while the flight is running.</span></li>
+          <li><b>4.2</b><span>Stay in your assigned seat and class. Entering a cabin you have not paid for is not allowed.</span></li>
           <li><b>4.3</b><span>Flight times are posted in the announcements channel. We may delay, change or cancel flights at any time.</span></li>
-          <li><b>4.4</b><span>You may join a flight late, but you can be refused boarding once the doors close.</span></li>
+          <li><b>4.4</b><span>Once a flight's server locks, it cannot be joined. Make sure you are in before it locks.</span></li>
           <li><b>4.5</b><span>You may record or stream flights, as long as you do not harass anyone in the video.</span></li>
         </ol>
 
@@ -184,44 +199,35 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li><b>5.2</b><span>What each class includes is set out on the <a href="#classes" data-doc="classes">Classes</a> page. Perks may change, be added or be removed at any time.</span></li>
           <li><b>5.3</b><span>A ban or punishment does not entitle you to a refund, or to keep perks during the punishment.</span></li>
           <li><b>5.4</b><span>All purchases also fall under the Roblox Terms of Use. Chargebacks or scams lead to a permanent ban.</span></li>
-          <li><b>5.5</b><span>AZAL never sells or trades staff ranks.</span></li>
         </ol>
 
-        <h2 id="en-t6">6. Staff and ranks</h2>
-        <ol class="clauses">
-          <li><b>6.1</b><span>Staff ranks run from Personnel up to the Executive Council. Ranks are earned through applications, trainings and activity.</span></li>
-          <li><b>6.2</b><span>No rank is guaranteed. Staff can be demoted or removed for inactivity, misconduct or breaking these terms.</span></li>
-          <li><b>6.3</b><span>Staff must follow these terms. Abusing staff powers leads to removal and may lead to a ban.</span></li>
-          <li><b>6.4</b><span>Decisions by the Directorial and Executive Councils are final, except through the appeal process in section 7.</span></li>
-        </ol>
-
-        <h2 id="en-t7">7. Moderation and appeals</h2>
-        <p>Punishments usually follow these steps. Staff can skip steps for serious breaks, such as hate speech, exploiting, scams or sharing personal information.</p>
+        <h2 id="en-t6">6. Moderation and appeals</h2>
+        <p>Punishments usually follow these steps. We can skip steps for serious breaks, such as hate speech, exploiting, scams or sharing personal information.</p>
         <div class="tbl">
           <table>
             <thead><tr><th>Step</th><th>Action</th><th>Duration</th></tr></thead>
             <tbody>
               <tr><td class="num">1</td><td>Verbal warning</td><td>–</td></tr>
-              <tr><td class="num">2</td><td>Written warning, logged by staff</td><td class="num">30 days</td></tr>
+              <tr><td class="num">2</td><td>Written warning</td><td class="num">30 days</td></tr>
               <tr><td class="num">3</td><td>Timeout or kick from the game or server</td><td class="num">1 hour to 7 days</td></tr>
               <tr><td class="num">4</td><td>Temporary ban</td><td class="num">7 to 30 days</td></tr>
               <tr><td class="num">5</td><td>Permanent ban from the group, games and server</td><td>Permanent</td></tr>
             </tbody>
           </table>
         </div>
-        <p><mark>To appeal, open a ticket in the support channel within 14 days of the punishment.</mark> A different staff member from the one who issued it will review your appeal. Each punishment can be appealed once.</p>
+        <p><mark>To appeal, open a ticket in the support channel within 14 days of the punishment.</mark> Someone other than the person who issued it will review your appeal. Each punishment can be appealed once.</p>
 
-        <h2 id="en-t8">8. Privacy, content and changes</h2>
+        <h2 id="en-t7">7. Privacy, content and changes</h2>
         <ol class="clauses">
-          <li><b>8.1</b><span>We only keep what our bots need to run the group: your Roblox and Discord usernames and IDs, your rank and your moderation history. We never ask for passwords, real names or addresses.</span></li>
-          <li><b>8.2</b><span>AZAL logos, emojis, banners and other designs belong to AZAL and may not be reused without permission.</span></li>
-          <li><b>8.3</b><span>Azerbaijan Airlines names and marks belong to their owners. AZAL uses them only as a fan tribute, with no commercial claim.</span></li>
-          <li><b>8.4</b><span>We may update these terms at any time. Changes are posted in the announcements channel, and staying in the group means you accept them.</span></li>
+          <li><b>7.1</b><span>We only keep what we need to run the group: your Roblox and Discord usernames and IDs, your class and your moderation history. We never ask for passwords, real names or addresses.</span></li>
+          <li><b>7.2</b><span>AZAL logos, emojis, banners and other designs belong to AZAL and may not be reused without permission.</span></li>
+          <li><b>7.3</b><span>Azerbaijan Airlines names and marks belong to their owners. AZAL uses them only as a fan tribute, with no commercial claim.</span></li>
+          <li><b>7.4</b><span>We may update these terms at any time. Changes are posted in the announcements channel, and staying in the group means you accept them.</span></li>
         </ol>
       </div>
 
       <div lang="az" hidden>
-        <p class="lead">AZAL Roblox qrupuna, Discord serverimizə və ya istənilən AZAL uçuşuna qoşulmaqla bu şərtləri qəbul etmiş olursunuz. Razı deyilsinizsə, zəhmət olmasa iştirak etməyin. Son yeniləmə: 22 oktyabr 2026.</p>
+        <p class="lead">AZAL-a xoş gəlmisiniz. Roblox qrupumuza, Discord serverimizə və ya istənilən AZAL uçuşuna qoşulmaqla bu şərtləri qəbul etmiş olursunuz. Razı deyilsinizsə, zəhmət olmasa iştirak etməyin.</p>
 
         <h2 id="az-t1">1. AZAL haqqında</h2>
         <p>AZAL Azərbaycan Hava Yollarından ilhamlanan, həvəskarlar tərəfindən idarə olunan Roblox aviaşirkət qrupudur. Biz “Azərbaycan Hava Yolları” QSC və ya hər hansı real aviaşirkətlə bağlı deyilik, onlar tərəfindən dəstəklənmirik və onlarla heç bir əlaqəmiz yoxdur.</p>
@@ -230,7 +236,6 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
         <ol class="clauses">
           <li><b>2.1</b><span><a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">Roblox İstifadə Şərtlərinə</a> və <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Xidmət Şərtlərinə</a>, o cümlədən onların yaş tələblərinə əməl etməlisiniz.</span></li>
           <li><b>2.2</b><span>Hər şəxsə bir hesab. Cəzadan yayınmaq, mükafat toplamaq və ya iki dəfə səs vermək üçün istifadə olunan əlavə hesablar əsas hesabla birlikdə bloklanacaq.</span></li>
-          <li><b>2.3</b><span><mark>Ekonom sinifdən yuxarı istənilən rütbəyə sahib olmaq üçün Roblox və Discord hesablarınız doğrulama botumuz vasitəsilə əlaqələndirilməlidir.</mark></span></li>
         </ol>
 
         <h2 id="az-t3">3. Davranış qaydaları</h2>
@@ -239,19 +244,19 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li><b>3.1</b><span>Hamıya hörmətlə yanaşın. Təhqir, nifrət nitqi, ayrı-seçkilik və zorbalığa yol verilmir.</span></li>
           <li><b>3.2</b><span>Söhbətdə, adlarda, avatarlarda və ya şəkillərdə NSFW, zorakı və ya şok edici məzmun qadağandır.</span></li>
           <li><b>3.3</b><span>İcazəsiz spam, flud, kütləvi ping və reklam qadağandır.</span></li>
-          <li><b>3.4</b><span>Eksploit, fırıldaq və ya xətalardan öz xeyrinizə istifadə etmək qadağandır. Xətaları heyətə bildirin.</span></li>
-          <li><b>3.5</b><span>Heyət üzvlərini, digər üzvləri və ya real Azərbaycan Hava Yolları əməkdaşlarını təqlid etmək qadağandır.</span></li>
+          <li><b>3.4</b><span>Eksploit, fırıldaq və ya xətalardan öz xeyrinizə istifadə etmək qadağandır. Xətaları bizə bildirin.</span></li>
+          <li><b>3.5</b><span>Personalı (Personnel), digər üzvləri və ya real Azərbaycan Hava Yolları əməkdaşlarını təqlid etmək qadağandır.</span></li>
           <li><b>3.6</b><span>Başqalarının şəxsi məlumatlarını paylaşmaq qadağandır.</span></li>
           <li><b>3.7</b><span>Söhbətləri uyğun kanallarda aparın. Kanalda başqa cür göstərilməyibsə, ingilis və ya Azərbaycan dilində yazın.</span></li>
-          <li><b>3.8</b><span>Trollinq etmək və ya uçuşları, tədbirləri və təlimləri qəsdən pozmaq qadağandır.</span></li>
+          <li><b>3.8</b><span>Trollinq etmək və ya uçuşları və tədbirləri qəsdən pozmaq qadağandır.</span></li>
         </ol>
 
         <h2 id="az-t4">4. Uçuşlar və tədbirlər</h2>
         <ol class="clauses">
-          <li><b>4.1</b><span>Uçuş zamanı salon heyətinin, pilotların və digər heyət üzvlərinin göstərişlərinə əməl edin. Uçuş davam etdiyi müddətdə onların qərarı yekundur.</span></li>
-          <li><b>4.2</b><span>Sizə ayrılmış oturacaqda və sinifdə qalın. Ödəmədiyiniz və ya rütbənizə uyğun olmayan salona keçmək qadağandır.</span></li>
+          <li><b>4.1</b><span>Uçuş zamanı Personalın (Personnel) göstərişlərinə əməl edin. Uçuş davam etdiyi müddətdə onların qərarı yekundur.</span></li>
+          <li><b>4.2</b><span>Sizə ayrılmış oturacaqda və sinifdə qalın. Ödəmədiyiniz salona keçmək qadağandır.</span></li>
           <li><b>4.3</b><span>Uçuş vaxtları elanlar kanalında paylaşılır. Uçuşları istənilən vaxt təxirə sala, dəyişə və ya ləğv edə bilərik.</span></li>
-          <li><b>4.4</b><span>Uçuşa gecikməklə qoşula bilərsiniz, lakin qapılar bağlandıqdan sonra təyyarəyə buraxılmaya bilərsiniz.</span></li>
+          <li><b>4.4</b><span>Uçuşun serveri kilidləndikdən sonra ona qoşulmaq mümkün deyil. Kilidlənmədən əvvəl serverdə olduğunuza əmin olun.</span></li>
           <li><b>4.5</b><span>Uçuşları yazıya ala və ya yayımlaya bilərsiniz, bir şərtlə ki, videoda heç kimi təhqir etməyəsiniz.</span></li>
         </ol>
 
@@ -261,39 +266,30 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li><b>5.2</b><span>Hər sinfə nələrin daxil olduğu <a href="#classes" data-doc="classes">Siniflər</a> səhifəsində göstərilib. İmtiyazlar istənilən vaxt dəyişdirilə, əlavə oluna və ya ləğv edilə bilər.</span></li>
           <li><b>5.3</b><span>Blok və ya cəza sizə pulun geri qaytarılması və ya cəza müddətində imtiyazları saxlamaq hüququ vermir.</span></li>
           <li><b>5.4</b><span>Bütün alışlar həmçinin Roblox İstifadə Şərtlərinə tabedir. Ödənişin geri çağırılması (chargeback) və ya fırıldaqçılıq daimi blokla nəticələnir.</span></li>
-          <li><b>5.5</b><span>AZAL heç vaxt heyət rütbələrini satmır və dəyişmir.</span></li>
         </ol>
 
-        <h2 id="az-t6">6. Heyət və rütbələr</h2>
-        <ol class="clauses">
-          <li><b>6.1</b><span>Heyət rütbələri Personaldan (Personnel) İcra Şurasına (Executive Council) qədərdir. Rütbələr müraciətlər, təlimlər və fəallıq vasitəsilə qazanılır.</span></li>
-          <li><b>6.2</b><span>Heç bir rütbə zəmanətli deyil. Heyət üzvlərinin rütbəsi fəaliyyətsizlik, nalayiq davranış və ya bu şərtləri pozduğuna görə aşağı salına və ya onlar heyətdən çıxarıla bilər.</span></li>
-          <li><b>6.3</b><span>Heyət üzvləri bu şərtlərə əməl etməlidir. Heyət səlahiyyətlərindən sui-istifadə heyətdən çıxarılma ilə nəticələnir və bloka səbəb ola bilər.</span></li>
-          <li><b>6.4</b><span>Direktorlar Şurasının (Directorial Council) və İcra Şurasının qərarları yekundur. Yeganə istisna 7-ci bölmədəki şikayət qaydasıdır.</span></li>
-        </ol>
-
-        <h2 id="az-t7">7. Moderasiya və şikayətlər</h2>
-        <p>Cəzalar adətən aşağıdakı mərhələlərlə tətbiq olunur. Nifrət nitqi, eksploit, fırıldaqçılıq və ya şəxsi məlumatların paylaşılması kimi ciddi pozuntularda heyət mərhələləri ötürə bilər.</p>
+        <h2 id="az-t6">6. Moderasiya və şikayətlər</h2>
+        <p>Cəzalar adətən aşağıdakı mərhələlərlə tətbiq olunur. Nifrət nitqi, eksploit, fırıldaqçılıq və ya şəxsi məlumatların paylaşılması kimi ciddi pozuntularda mərhələləri ötürə bilərik.</p>
         <div class="tbl">
           <table>
             <thead><tr><th>Mərhələ</th><th>Tədbir</th><th>Müddət</th></tr></thead>
             <tbody>
               <tr><td class="num">1</td><td>Şifahi xəbərdarlıq</td><td>–</td></tr>
-              <tr><td class="num">2</td><td>Yazılı xəbərdarlıq, heyət tərəfindən qeydə alınır</td><td class="num">30 gün</td></tr>
+              <tr><td class="num">2</td><td>Yazılı xəbərdarlıq</td><td class="num">30 gün</td></tr>
               <tr><td class="num">3</td><td>Oyunda və ya serverdə susdurma, yaxud oradan çıxarılma</td><td class="num">1 saatdan 7 günədək</td></tr>
               <tr><td class="num">4</td><td>Müvəqqəti blok</td><td class="num">7 gündən 30 günədək</td></tr>
               <tr><td class="num">5</td><td>Qrupdan, oyunlardan və serverdən daimi blok</td><td>Daimi</td></tr>
             </tbody>
           </table>
         </div>
-        <p><mark>Şikayət vermək üçün cəzadan sonra 14 gün ərzində dəstək kanalında bilet açın.</mark> Şikayətinizə cəzanı verən şəxsdən fərqli heyət üzvü baxacaq. Hər cəzadan yalnız bir dəfə şikayət etmək olar.</p>
+        <p><mark>Şikayət vermək üçün cəzadan sonra 14 gün ərzində dəstək kanalında bilet açın.</mark> Şikayətinizə cəzanı verən şəxsdən başqası baxacaq. Hər cəzadan yalnız bir dəfə şikayət etmək olar.</p>
 
-        <h2 id="az-t8">8. Məxfilik, məzmun və dəyişikliklər</h2>
+        <h2 id="az-t7">7. Məxfilik, məzmun və dəyişikliklər</h2>
         <ol class="clauses">
-          <li><b>8.1</b><span>Biz yalnız botlarımızın qrupu idarə etmək üçün ehtiyac duyduğu məlumatları saxlayırıq: Roblox və Discord istifadəçi adlarınız və ID-ləriniz, rütbəniz və moderasiya tarixçəniz. Biz heç vaxt parol, real ad və ya ünvan istəmirik.</span></li>
-          <li><b>8.2</b><span>AZAL loqoları, emojiləri, bannerləri və digər dizaynları AZAL-a məxsusdur və icazəsiz istifadə edilə bilməz.</span></li>
-          <li><b>8.3</b><span>Azərbaycan Hava Yollarının adları və nişanları onların sahiblərinə məxsusdur. AZAL onlardan yalnız həvəskar ehtiramı kimi, heç bir kommersiya iddiası olmadan istifadə edir.</span></li>
-          <li><b>8.4</b><span>Bu şərtləri istənilən vaxt yeniləyə bilərik. Dəyişikliklər elanlar kanalında paylaşılır. Qrupda qalmağınız onları qəbul etdiyiniz mənasına gəlir.</span></li>
+          <li><b>7.1</b><span>Biz yalnız qrupu idarə etmək üçün lazım olan məlumatları saxlayırıq: Roblox və Discord istifadəçi adlarınız və ID-ləriniz, sinfiniz və moderasiya tarixçəniz. Biz heç vaxt parol, real ad və ya ünvan istəmirik.</span></li>
+          <li><b>7.2</b><span>AZAL loqoları, emojiləri, bannerləri və digər dizaynları AZAL-a məxsusdur və icazəsiz istifadə edilə bilməz.</span></li>
+          <li><b>7.3</b><span>Azərbaycan Hava Yollarının adları və nişanları onların sahiblərinə məxsusdur. AZAL onlardan yalnız həvəskar ehtiramı kimi, heç bir kommersiya iddiası olmadan istifadə edir.</span></li>
+          <li><b>7.4</b><span>Bu şərtləri istənilən vaxt yeniləyə bilərik. Dəyişikliklər elanlar kanalında paylaşılır. Qrupda qalmağınız onları qəbul etdiyiniz mənasına gəlir.</span></li>
         </ol>
       </div>
     </article>
@@ -301,7 +297,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     <!-- ===================== CLASSES ===================== -->
     <article id="classes" hidden>
       <div lang="en">
-        <p class="lead">Every AZAL passenger flies Economy Class for free. Business Class is a paid upgrade with a better seat and extra perks on every flight.</p>
+        <p class="lead">Every AZAL passenger flies Economy Class for free. For a more comfortable journey, upgrade to Business Class for a better seat and extra perks on every flight.</p>
 
         <h2>Compare classes</h2>
         <div class="tbl">
@@ -323,7 +319,6 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
         <ol class="steps">
           <li>Join the AZAL Roblox group. You get Economy Class straight away.</li>
           <li>To upgrade, buy the Business Class game pass on our game page.</li>
-          <li><mark>Run the verify command in our Discord server.</mark> The bot gives you the matching role within a few minutes.</li>
         </ol>
 
         <h2>Conditions</h2>
@@ -331,12 +326,11 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li>Your class is tied to your Roblox account and cannot be transferred, gifted or sold.</li>
           <li>Purchases are final, as set out in the <a href="#terms" data-doc="terms">Terms of Service</a>.</li>
           <li>Sitting in a cabin you have not paid for will get you moved. Repeated cases count as a rule break.</li>
-          <li>Classes are separate from staff ranks. Buying Business Class does not give any staff powers.</li>
         </ul>
       </div>
 
       <div lang="az" hidden>
-        <p class="lead">AZAL-ın bütün sərnişinləri Ekonom sinifdə pulsuz uçur. Biznes sinif daha rahat oturacaq və hər uçuşda əlavə imtiyazlar təqdim edən ödənişli yüksəltmədir.</p>
+        <p class="lead">AZAL-ın bütün sərnişinləri Ekonom sinifdə pulsuz uçur. Daha rahat səyahət üçün Biznes sinfə keçin və hər uçuşda daha yaxşı oturacaq və əlavə imtiyazlardan yararlanın.</p>
 
         <h2>Sinifləri müqayisə edin</h2>
         <div class="tbl">
@@ -358,7 +352,6 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
         <ol class="steps">
           <li>AZAL Roblox qrupuna qoşulun. Ekonom sinif sizə dərhal verilir.</li>
           <li>Yüksəltmək üçün oyun səhifəmizdən Biznes sinif game pass-ını alın.</li>
-          <li><mark>Discord serverimizdə doğrulama əmrini işlədin.</mark> Bot bir neçə dəqiqə ərzində sizə uyğun rolu verəcək.</li>
         </ol>
 
         <h2>Şərtlər</h2>
@@ -366,7 +359,6 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <li>Sinfiniz Roblox hesabınıza bağlıdır və başqasına ötürülə, hədiyyə edilə və ya satıla bilməz.</li>
           <li>Alışlar <a href="#terms" data-doc="terms">Xidmət şərtlərində</a> göstərildiyi kimi qətidir.</li>
           <li>Ödəmədiyiniz salonda otursanız, yeriniz dəyişdiriləcək. Təkrar hallar qayda pozuntusu sayılır.</li>
-          <li>Siniflər heyət rütbələrindən ayrıdır. Biznes sinif almaq heç bir heyət səlahiyyəti vermir.</li>
         </ul>
       </div>
     </article>
@@ -374,93 +366,78 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     <!-- ===================== PARTNERS ===================== -->
     <article id="partners" hidden>
       <div lang="en">
-        <p class="lead">AZAL partners with Roblox airlines, airports and aviation communities that share our standards.</p>
-
-        <h2>Current partners</h2>
+        <p class="lead">AZAL works with other Roblox aviation groups. Our partners are listed below.</p>
         <div class="tbl">
           <table>
             <thead><tr><th>Partner</th><th>Type</th><th>Partner since</th></tr></thead>
             <tbody><tr><td colspan="3">No partners yet.</td></tr></tbody>
           </table>
         </div>
-
-        <h2>Requirements</h2>
-        <ul class="plain">
-          <li>Be an aviation group on Roblox: an airline, airport, alliance or aviation community.</li>
-          <li>Have at least <mark>50</mark> members in your Roblox group or Discord server.</li>
-          <li>Hold flights or events at least once a month.</li>
-          <li>Have a Discord server with clear rules and active moderation.</li>
-          <li>Follow the Roblox Terms of Use and Discord Terms of Service.</li>
-          <li>Not copy AZAL's, or any other group's, assets, branding or games.</li>
-        </ul>
-
-        <h2>What each side provides</h2>
-        <div class="tbl">
-          <table>
-            <thead><tr><th></th><th>AZAL</th><th>Partner</th></tr></thead>
-            <tbody>
-              <tr><th>Listing</th><td>On this page and in our partners channel</td><td>AZAL listed in their partners channel or page</td></tr>
-              <tr><th>Representative</th><td>Partner role for one of their representatives</td><td>The same for one AZAL representative</td></tr>
-              <tr><th>Events</th><td>Invites to joint flights and events</td><td>The same in return</td></tr>
-              <tr><th>Conduct</th><td>Respect their rules when visiting</td><td>Follow the AZAL Terms of Service</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Partners must not poach AZAL staff or members, or advertise outside the partners channel.</p>
-
-        <h2>How to apply</h2>
-        <ol class="steps">
-          <li>Open a partnership ticket in our support channel.</li>
-          <li>Send your group link, Discord invite, member count and a short description of your group.</li>
-          <li>The Managerial Council will reply within <mark>7 days</mark>.</li>
-          <li>If approved, both groups exchange representatives and add each other to their partner lists.</li>
-        </ol>
-        <p>Either side can end a partnership at any time. AZAL will end it straight away if a partner breaks the Terms of Service, is inactive for 30 days or no longer meets the requirements.</p>
+        <p>Want to partner with AZAL? Open a partnership ticket in our Discord server.</p>
       </div>
-
       <div lang="az" hidden>
-        <p class="lead">AZAL standartlarımızı bölüşən Roblox aviaşirkətləri, hava limanları və aviasiya icmaları ilə tərəfdaşlıq edir.</p>
-
-        <h2>Hazırkı tərəfdaşlar</h2>
+        <p class="lead">AZAL digər Roblox aviasiya qrupları ilə əməkdaşlıq edir. Tərəfdaşlarımız aşağıda göstərilib.</p>
         <div class="tbl">
           <table>
             <thead><tr><th>Tərəfdaş</th><th>Növ</th><th>Tərəfdaşlıq tarixi</th></tr></thead>
             <tbody><tr><td colspan="3">Hələ tərəfdaş yoxdur.</td></tr></tbody>
           </table>
         </div>
+        <p>AZAL ilə tərəfdaş olmaq istəyirsiniz? Discord serverimizdə tərəfdaşlıq bileti açın.</p>
+      </div>
+    </article>
 
-        <h2>Tələblər</h2>
-        <ul class="plain">
-          <li>Roblox-da aviasiya qrupu olmalısınız: aviaşirkət, hava limanı, alyans və ya aviasiya icması.</li>
-          <li>Roblox qrupunuzda və ya Discord serverinizdə ən azı <mark>50</mark> üzv olmalıdır.</li>
-          <li>Ayda ən azı bir dəfə uçuş və ya tədbir keçirməlisiniz.</li>
-          <li>Aydın qaydaları və fəal moderasiyası olan Discord serveriniz olmalıdır.</li>
-          <li>Roblox İstifadə Şərtlərinə və Discord Xidmət Şərtlərinə əməl etməlisiniz.</li>
-          <li>AZAL-ın və ya hər hansı digər qrupun materiallarını, brendini və ya oyunlarını kopyalamamalısınız.</li>
+    <!-- ===================== FAQ ===================== -->
+    <article id="faq" hidden>
+      <div lang="en">
+        <dl class="faq">
+          <div><dt>Is AZAL the real Azerbaijan Airlines?</dt><dd>No. AZAL is a fan-run Roblox group inspired by Azerbaijan Airlines and has no link to the real airline.</dd></div>
+          <div><dt>How do I fly with AZAL?</dt><dd>Join our Roblox group and Discord server. Flight times are posted in the announcements channel, so join the game before the server locks.</dd></div>
+          <div><dt>When are flights?</dt><dd>Every flight is announced in the announcements channel. Turn on notifications for that channel so you don't miss one.</dd></div>
+          <div><dt>I missed a flight because the server locked. Can I still join?</dt><dd>No. Once a server locks, it can't be joined. Look out for the next flight.</dd></div>
+          <div><dt>How do I get Business Class?</dt><dd>Buy the Business Class game pass on our game page. See the <a href="#classes" data-doc="classes">Classes</a> page for what's included.</dd></div>
+          <div><dt>Can I get a refund?</dt><dd>No. All Robux purchases are final.</dd></div>
+          <div><dt>How do I report someone?</dt><dd>Open a ticket in the support channel of our Discord server, with screenshots or a clip if you have them.</dd></div>
+          <div><dt>I was punished and think it was unfair. What can I do?</dt><dd>Open a ticket in the support channel within <mark>14 days</mark> of the punishment, and we'll review it.</dd></div>
+          <div><dt>How can I join the AZAL team?</dt><dd>When applications open, we post them in the announcements channel.</dd></div>
+          <div><dt>Can my group partner with AZAL?</dt><dd>Open a partnership ticket in our Discord server.</dd></div>
+          <div><dt>What languages can I use?</dt><dd>English or Azerbaijani, unless a channel says otherwise.</dd></div>
+        </dl>
+      </div>
+      <div lang="az" hidden>
+        <dl class="faq">
+          <div><dt>AZAL həqiqi Azərbaycan Hava Yollarıdırmı?</dt><dd>Xeyr. AZAL Azərbaycan Hava Yollarından ilhamlanan, həvəskarlar tərəfindən idarə olunan Roblox qrupudur və real aviaşirkətlə heç bir əlaqəsi yoxdur.</dd></div>
+          <div><dt>AZAL ilə necə uça bilərəm?</dt><dd>Roblox qrupumuza və Discord serverimizə qoşulun. Uçuş vaxtları elanlar kanalında paylaşılır, ona görə də server kilidlənməzdən əvvəl oyuna daxil olun.</dd></div>
+          <div><dt>Uçuşlar nə vaxt olur?</dt><dd>Hər uçuş elanlar kanalında elan olunur. Heç bir uçuşu buraxmamaq üçün həmin kanalın bildirişlərini aktiv edin.</dd></div>
+          <div><dt>Server kilidləndiyi üçün uçuşu buraxdım. Yenə də qoşula bilərəmmi?</dt><dd>Xeyr. Server kilidləndikdən sonra ona qoşulmaq mümkün deyil. Növbəti uçuşu gözləyin.</dd></div>
+          <div><dt>Biznes sinfi necə əldə edə bilərəm?</dt><dd>Oyun səhifəmizdən Biznes sinif game pass-ını alın. Nələrin daxil olduğunu <a href="#classes" data-doc="classes">Siniflər</a> səhifəsində görə bilərsiniz.</dd></div>
+          <div><dt>Pulumu geri ala bilərəmmi?</dt><dd>Xeyr. Robux ilə edilən bütün alışlar qətidir.</dd></div>
+          <div><dt>Kimdənsə necə şikayət edə bilərəm?</dt><dd>Discord serverimizin dəstək kanalında bilet açın. Varsa, ekran görüntüləri və ya video əlavə edin.</dd></div>
+          <div><dt>Cəzalandırılmışam və bunun ədalətsiz olduğunu düşünürəm. Nə edə bilərəm?</dt><dd>Cəzadan sonra <mark>14 gün</mark> ərzində dəstək kanalında bilet açın, biz ona yenidən baxacağıq.</dd></div>
+          <div><dt>AZAL komandasına necə qoşula bilərəm?</dt><dd>Müraciətlər açıldıqda elanlar kanalında paylaşırıq.</dd></div>
+          <div><dt>Qrupum AZAL ilə tərəfdaş ola bilərmi?</dt><dd>Discord serverimizdə tərəfdaşlıq bileti açın.</dd></div>
+          <div><dt>Hansı dillərdən istifadə edə bilərəm?</dt><dd>Kanalda başqa cür göstərilməyibsə, ingilis və ya Azərbaycan dilindən.</dd></div>
+        </dl>
+      </div>
+    </article>
+
+    <!-- ===================== SOCIALS ===================== -->
+    <article id="social" hidden>
+      <div lang="en">
+        <p class="lead">Follow AZAL for flight times, events and news.</p>
+        <ul class="links">
+          <li><b>Discord server</b><div><mark>Add invite link</mark><span>Flight announcements, support and the community.</span></div></li>
+          <li><b>Roblox group</b><div><mark>Add group link</mark><span>Join to get Economy Class.</span></div></li>
+          <li><b>Roblox game</b><div><mark>Add game link</mark><span>Where our flights take place.</span></div></li>
         </ul>
-
-        <h2>Tərəflərin öhdəlikləri</h2>
-        <div class="tbl">
-          <table>
-            <thead><tr><th></th><th>AZAL</th><th>Tərəfdaş</th></tr></thead>
-            <tbody>
-              <tr><th>Siyahı</th><td>Bu səhifədə və tərəfdaşlar kanalımızda yer</td><td>AZAL-ın onların tərəfdaşlar kanalında və ya səhifəsində qeyd olunması</td></tr>
-              <tr><th>Nümayəndə</th><td>Onların bir nümayəndəsinə Partner rolu</td><td>Bir AZAL nümayəndəsi üçün eyni</td></tr>
-              <tr><th>Tədbirlər</th><td>Birgə uçuş və tədbirlərə dəvət</td><td>Qarşılıqlı olaraq eyni</td></tr>
-              <tr><th>Davranış</th><td>Ziyarət zamanı onların qaydalarına hörmət</td><td>AZAL Xidmət şərtlərinə əməl</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Tərəfdaşlar AZAL heyətini və ya üzvlərini öz qruplarına cəlb etməməli və tərəfdaşlar kanalından kənarda reklam etməməlidir.</p>
-
-        <h2>Necə müraciət etmək olar</h2>
-        <ol class="steps">
-          <li>Dəstək kanalımızda tərəfdaşlıq bileti açın.</li>
-          <li>Qrupunuzun linkini, Discord dəvətini, üzv sayını və qrupunuz haqqında qısa məlumat göndərin.</li>
-          <li>İdarəetmə Şurası <mark>7 gün</mark> ərzində cavab verəcək.</li>
-          <li>Təsdiq olunarsa, hər iki qrup nümayəndə mübadiləsi edir və bir-birini tərəfdaşlar siyahısına əlavə edir.</li>
-        </ol>
-        <p>Hər iki tərəf tərəfdaşlığa istənilən vaxt son verə bilər. Tərəfdaş Xidmət şərtlərini pozarsa, 30 gün fəaliyyətsiz qalarsa və ya artıq tələblərə cavab vermirsə, AZAL tərəfdaşlığa dərhal son verəcək.</p>
+      </div>
+      <div lang="az" hidden>
+        <p class="lead">Uçuş vaxtları, tədbirlər və xəbərlər üçün AZAL-ı izləyin.</p>
+        <ul class="links">
+          <li><b>Discord serveri</b><div><mark>Dəvət linki əlavə olunacaq</mark><span>Uçuş elanları, dəstək və icma.</span></div></li>
+          <li><b>Roblox qrupu</b><div><mark>Qrup linki əlavə olunacaq</mark><span>Ekonom sinif əldə etmək üçün qoşulun.</span></div></li>
+          <li><b>Roblox oyunu</b><div><mark>Oyun linki əlavə olunacaq</mark><span>Uçuşlarımız burada keçirilir.</span></div></li>
+        </ul>
       </div>
     </article>
   </main>
@@ -478,11 +455,11 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
   var docs = {
     terms: { en: 'Terms of Service', az: 'Xidmət şərtləri' },
     classes: { en: 'Classes', az: 'Siniflər' },
-    partners: { en: 'Partners', az: 'Tərəfdaşlar' }
+    partners: { en: 'Partners', az: 'Tərəfdaşlar' },
+    faq: { en: 'Frequently asked questions', az: 'Tez-tez verilən suallar' },
+    social: { en: 'Social links', az: 'Sosial şəbəkələr' }
   };
   var state = { doc: 'terms', lang: 'en' };
-
-  function hashFor() { return (state.lang === 'az' ? 'az-' : '') + state.doc; }
 
   function render(top) {
     var d = state.doc, l = state.lang, other = l === 'en' ? 'az' : 'en';
@@ -502,7 +479,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     document.querySelectorAll('a[data-doc]').forEach(function (a) {
       a.setAttribute('href', '#' + (l === 'az' ? 'az-' : '') + a.getAttribute('data-doc'));
     });
-    try { history.replaceState(null, '', '#' + hashFor()); } catch (e) {}
+    try { history.replaceState(null, '', '#' + (l === 'az' ? 'az-' : '') + d); } catch (e) {}
     try { localStorage.setItem('azal-lang', l); } catch (e) {}
     if (top) window.scrollTo(0, 0);
   }
