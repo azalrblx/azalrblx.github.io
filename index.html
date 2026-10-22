@@ -68,8 +68,13 @@ a:hover { color: var(--navy); }
 .draft { background: var(--mark); padding: 10px 14px; font-size: 13.5px; margin: 0 0 22px; }
 .doc .lead { font-size: 16px; margin: 0 0 24px; }
 .doc h2 { font-size: 19px; color: var(--navy); margin: 30px 0 8px; font-weight: 700; scroll-margin-top: 16px; }
-.doc .lead + h2 { margin-top: 0; }
+.doc .lead + h2, .doc .intro + h2 { margin-top: 0; }
 .doc p { margin: 0 0 10px; }
+.doc h3 { font-size: 15.5px; font-weight: 700; color: var(--text); margin: 16px 0 4px; }
+.doc .intro { margin: 0 0 26px; }
+.doc .intro .lead { margin-bottom: 12px; }
+.doc .note { font-size: 13.5px; color: var(--sub); }
+.doc .price { font-weight: 600; color: var(--navy); }
 .clauses { list-style: none; padding: 0; margin: 0 0 10px; }
 .clauses li { display: grid; grid-template-columns: 2.6em minmax(0, 1fr); margin-bottom: 7px; }
 .clauses li > b { font-weight: 600; color: var(--sub); font-variant-numeric: tabular-nums; }
@@ -137,13 +142,9 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     <ul>
       <li><a href="#terms" data-doc="terms" data-en="Terms of Service" data-az="Xidmət şərtləri">Terms of Service</a>
         <ul class="sub" data-for="terms">
-          <li><a href="#terms" data-jump="1" data-en="About AZAL" data-az="AZAL haqqında">About AZAL</a></li>
-          <li><a href="#terms" data-jump="2" data-en="Who can join" data-az="Kimlər qoşula bilər">Who can join</a></li>
-          <li><a href="#terms" data-jump="3" data-en="Conduct" data-az="Davranış qaydaları">Conduct</a></li>
-          <li><a href="#terms" data-jump="4" data-en="Flights and events" data-az="Uçuşlar və tədbirlər">Flights and events</a></li>
-          <li><a href="#terms" data-jump="5" data-en="Purchases" data-az="Alışlar">Purchases</a></li>
-          <li><a href="#terms" data-jump="6" data-en="Moderation and appeals" data-az="Moderasiya və şikayətlər">Moderation and appeals</a></li>
-          <li><a href="#terms" data-jump="7" data-en="Privacy and changes" data-az="Məxfilik və dəyişikliklər">Privacy and changes</a></li>
+          <li><a href="#terms" data-jump="1" data-en="General rules" data-az="Ümumi qaydalar">General rules</a></li>
+          <li><a href="#terms" data-jump="2" data-en="Roblox rules" data-az="Roblox qaydaları">Roblox rules</a></li>
+          <li><a href="#terms" data-jump="3" data-en="Discord rules" data-az="Discord qaydaları">Discord rules</a></li>
         </ul>
       </li>
       <li><a href="#classes" data-doc="classes" data-en="Classes" data-az="Siniflər">Classes</a></li>
@@ -160,205 +161,222 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     <!-- ===================== TERMS ===================== -->
     <article id="terms">
       <div lang="en">
-        <p class="lead">Welcome to AZAL. By joining our Roblox group, our Discord server or any AZAL flight, you agree to these terms. If you do not agree, please do not take part.</p>
-
-        <h2 id="en-t1">1. About AZAL</h2>
-        <p>AZAL is a fan-run Roblox airline group inspired by Azerbaijan Airlines. We are not affiliated with, endorsed by or connected to Azerbaijan Airlines CJSC or any real airline.</p>
-
-        <h2 id="en-t2">2. Who can join</h2>
-        <ol class="clauses">
-          <li><b>2.1</b><span>You must follow the <a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">Roblox Terms of Use</a> and <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms of Service</a>, including their age requirements.</span></li>
-          <li><b>2.2</b><span>One account per person. Alternate accounts used to dodge punishments, farm rewards or vote twice will be banned along with the main account.</span></li>
-        </ol>
-
-        <h2 id="en-t3">3. Conduct</h2>
-        <p>These rules apply in our Roblox games, our Discord server and anywhere you represent AZAL.</p>
-        <ol class="clauses">
-          <li><b>3.1</b><span>Treat everyone with respect. No harassment, hate speech, discrimination or bullying.</span></li>
-          <li><b>3.2</b><span>No NSFW, violent or shocking content in chat, names, avatars or images.</span></li>
-          <li><b>3.3</b><span>No spamming, flooding, mass pinging or advertising without permission.</span></li>
-          <li><b>3.4</b><span>No exploiting, cheating or using bugs to your advantage. Report bugs to us instead.</span></li>
-          <li><b>3.5</b><span>No impersonating Personnel, other members or real Azerbaijan Airlines employees.</span></li>
-          <li><b>3.6</b><span>No sharing other people's personal information.</span></li>
-          <li><b>3.7</b><span>Keep conversations in the right channels, and in English or Azerbaijani unless a channel says otherwise.</span></li>
-          <li><b>3.8</b><span>No trolling or deliberately disrupting flights or events.</span></li>
-        </ol>
-
-        <h2 id="en-t4">4. Flights and events</h2>
-        <ol class="clauses">
-          <li><b>4.1</b><span>Follow instructions from Personnel during a flight. Their decision is final while the flight is running.</span></li>
-          <li><b>4.2</b><span>Stay in your assigned seat and class. Entering a cabin you have not paid for is not allowed.</span></li>
-          <li><b>4.3</b><span>Flight times are posted in the announcements channel. We may delay, change or cancel flights at any time.</span></li>
-          <li><b>4.4</b><span>Once a flight's server locks, it cannot be joined. Make sure you are in before it locks.</span></li>
-          <li><b>4.5</b><span>You may record or stream flights, as long as you do not harass anyone in the video.</span></li>
-        </ol>
-
-        <h2 id="en-t5">5. Purchases and classes</h2>
-        <ol class="clauses">
-          <li><b>5.1</b><span>Robux purchases (game passes, class upgrades, donations) are final. We do not give refunds.</span></li>
-          <li><b>5.2</b><span>What each class includes is set out on the <a href="#classes" data-doc="classes">Classes</a> page. Perks may change, be added or be removed at any time.</span></li>
-          <li><b>5.3</b><span>A ban or punishment does not entitle you to a refund, or to keep perks during the punishment.</span></li>
-          <li><b>5.4</b><span>All purchases also fall under the Roblox Terms of Use. Chargebacks or scams lead to a permanent ban.</span></li>
-        </ol>
-
-        <h2 id="en-t6">6. Moderation and appeals</h2>
-        <p>Punishments usually follow these steps. We can skip steps for serious breaks, such as hate speech, exploiting, scams or sharing personal information.</p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Step</th><th>Action</th><th>Duration</th></tr></thead>
-            <tbody>
-              <tr><td class="num">1</td><td>Verbal warning</td><td>–</td></tr>
-              <tr><td class="num">2</td><td>Written warning</td><td class="num">30 days</td></tr>
-              <tr><td class="num">3</td><td>Timeout or kick from the game or server</td><td class="num">1 hour to 7 days</td></tr>
-              <tr><td class="num">4</td><td>Temporary ban</td><td class="num">7 to 30 days</td></tr>
-              <tr><td class="num">5</td><td>Permanent ban from the group, games and server</td><td>Permanent</td></tr>
-            </tbody>
-          </table>
+        <div class="intro">
+          <p class="lead">AZAL is a place to fly, chat and take part in events in a friendly, respectful community. To keep it that way, we ask all members to follow the rules below. By taking part in AZAL flights, events, games or our Discord server, you agree to these Terms of Service.</p>
+          <p>Breaking these terms can lead to action decided by the AZAL Executive Council, including warnings, mutes, kicks, bans and blacklists. AZAL management may act against anyone whose behaviour harms the community or its reputation, even if that behaviour is not listed here.</p>
+          <p class="note">AZAL is a fan-run Roblox group inspired by Azerbaijan Airlines and is not affiliated with Azerbaijan Airlines CJSC.</p>
         </div>
-        <p><mark>To appeal, open a ticket in the support channel within 14 days of the punishment.</mark> Someone other than the person who issued it will review your appeal. Each punishment can be appealed once.</p>
 
-        <h2 id="en-t7">7. Privacy, content and changes</h2>
+        <h2 id="en-t1">1. General rules</h2>
+        <h3>1.1 Violence and threats</h3>
+        <ul class="plain">
+          <li>Content showing violence, gore or animal abuse is not allowed.</li>
+          <li>Threats to harm anyone, physically, emotionally or financially, are not tolerated.</li>
+        </ul>
+        <h3>1.2 Bullying and harassment</h3>
+        <ul class="plain">
+          <li>Do not degrade, shame or harass anyone.</li>
+          <li>Discrimination or hate speech based on any of the following is not allowed: race, ethnicity or national origin; religion; gender identity or sexual orientation; age, disability or medical conditions.</li>
+          <li>Do not spam or share misleading content.</li>
+        </ul>
+        <h3>1.3 Harmful content</h3>
+        <ul class="plain">
+          <li>Content that glorifies or encourages self-harm, eating disorders or suicide is not allowed, and neither is encouraging anyone to harm themselves.</li>
+        </ul>
+        <h3>1.4 Privacy and impersonation</h3>
+        <ul class="plain">
+          <li>Do not share anyone's personal information, such as photos of faces, IDs or links to their other social media.</li>
+          <li>Do not impersonate anyone, including Personnel or real Azerbaijan Airlines employees.</li>
+        </ul>
+        <h3>1.5 Illegal behaviour</h3>
+        <ul class="plain">
+          <li>Anything illegal, including fraud, offering or asking for sexual services, or exploiting minors in any way, is not allowed. It leads to immediate action and may be reported to the authorities.</li>
+        </ul>
+        <h3>1.6 Sexual content</h3>
+        <ul class="plain">
+          <li>Sexual or explicit content is not allowed. Any content sexualising minors leads to a permanent blacklist and a report to the relevant authorities.</li>
+        </ul>
+
+        <h2 id="en-t2">2. Roblox rules</h2>
         <ol class="clauses">
-          <li><b>7.1</b><span>We only keep what we need to run the group: your Roblox and Discord usernames and IDs, your class and your moderation history. We never ask for passwords, real names or addresses.</span></li>
-          <li><b>7.2</b><span>AZAL logos, emojis, banners and other designs belong to AZAL and may not be reused without permission.</span></li>
-          <li><b>7.3</b><span>Azerbaijan Airlines names and marks belong to their owners. AZAL uses them only as a fan tribute, with no commercial claim.</span></li>
-          <li><b>7.4</b><span>We may update these terms at any time. Changes are posted in the announcements channel, and staying in the group means you accept them.</span></li>
+          <li><b>2.1</b><span>Follow instructions from Personnel during a flight. Their decision is final while the flight is running.</span></li>
+          <li><b>2.2</b><span>Do not try to get into restricted areas, including by using glitches or following Personnel. Report glitches instead.</span></li>
+          <li><b>2.3</b><span>Do not use Personnel-only equipment.</span></li>
+          <li><b>2.4</b><span>Stay in your class. Do not sit in, or use the services of, a class you have not bought.</span></li>
+          <li><b>2.5</b><span>Do not beg for upgrades.</span></li>
+          <li><b>2.6</b><span>No trolling or disrupting flights.</span></li>
+          <li><b>2.7</b><span>No exploiting, under any circumstances.</span></li>
+          <li><b>2.8</b><span>No terrorism or other offensive roleplay.</span></li>
+          <li><b>2.9</b><span>Do not bypass the chat filter or spam the chat.</span></li>
+          <li><b>2.10</b><span>Inappropriate avatars or clothing are not allowed, and you may be asked to change before boarding. AZAL management can decide an avatar is inappropriate even if it is not covered here.</span></li>
+          <li><b>2.11</b><span>Once a flight's server locks, it cannot be joined.</span></li>
+          <li><b>2.12</b><span>You must follow the <a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">Roblox Terms of Use</a>.</span></li>
+        </ol>
+
+        <h2 id="en-t3">3. Discord rules</h2>
+        <ol class="clauses">
+          <li><b>3.1</b><span>Use each channel for what it is meant for.</span></li>
+          <li><b>3.2</b><span>Do not ping people without a reason, including ghost pings. For questions, open a ticket in the support channel.</span></li>
+          <li><b>3.3</b><span>Do not play distorted, annoying or very loud sounds in voice channels.</span></li>
+          <li><b>3.4</b><span>Do not misuse bots.</span></li>
+          <li><b>3.5</b><span>Do not mention leaks, exploits or anything else malicious.</span></li>
+          <li><b>3.6</b><span>Do not start or add to drama.</span></li>
+          <li><b>3.7</b><span>Political and religious discussions are not allowed.</span></li>
+          <li><b>3.8</b><span>English and Azerbaijani are the only languages allowed.</span></li>
+          <li><b>3.9</b><span>You must be at least 13 to join the AZAL Discord server.</span></li>
+          <li><b>3.10</b><span>You must follow the <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Terms of Service</a>.</span></li>
         </ol>
       </div>
 
       <div lang="az" hidden>
-        <p class="lead">AZAL-a xoş gəlmisiniz. Roblox qrupumuza, Discord serverimizə və ya istənilən AZAL uçuşuna qoşulmaqla bu şərtləri qəbul etmiş olursunuz. Razı deyilsinizsə, zəhmət olmasa iştirak etməyin.</p>
-
-        <h2 id="az-t1">1. AZAL haqqında</h2>
-        <p>AZAL Azərbaycan Hava Yollarından ilhamlanan, həvəskarlar tərəfindən idarə olunan Roblox aviaşirkət qrupudur. Biz “Azərbaycan Hava Yolları” QSC və ya hər hansı real aviaşirkətlə bağlı deyilik, onlar tərəfindən dəstəklənmirik və onlarla heç bir əlaqəmiz yoxdur.</p>
-
-        <h2 id="az-t2">2. Kimlər qoşula bilər</h2>
-        <ol class="clauses">
-          <li><b>2.1</b><span><a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">Roblox İstifadə Şərtlərinə</a> və <a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Xidmət Şərtlərinə</a>, o cümlədən onların yaş tələblərinə əməl etməlisiniz.</span></li>
-          <li><b>2.2</b><span>Hər şəxsə bir hesab. Cəzadan yayınmaq, mükafat toplamaq və ya iki dəfə səs vermək üçün istifadə olunan əlavə hesablar əsas hesabla birlikdə bloklanacaq.</span></li>
-        </ol>
-
-        <h2 id="az-t3">3. Davranış qaydaları</h2>
-        <p>Bu qaydalar Roblox oyunlarımızda, Discord serverimizdə və AZAL-ı təmsil etdiyiniz hər yerdə tətbiq olunur.</p>
-        <ol class="clauses">
-          <li><b>3.1</b><span>Hamıya hörmətlə yanaşın. Təhqir, nifrət nitqi, ayrı-seçkilik və zorbalığa yol verilmir.</span></li>
-          <li><b>3.2</b><span>Söhbətdə, adlarda, avatarlarda və ya şəkillərdə NSFW, zorakı və ya şok edici məzmun qadağandır.</span></li>
-          <li><b>3.3</b><span>İcazəsiz spam, flud, kütləvi ping və reklam qadağandır.</span></li>
-          <li><b>3.4</b><span>Eksploit, fırıldaq və ya xətalardan öz xeyrinizə istifadə etmək qadağandır. Xətaları bizə bildirin.</span></li>
-          <li><b>3.5</b><span>Personalı (Personnel), digər üzvləri və ya real Azərbaycan Hava Yolları əməkdaşlarını təqlid etmək qadağandır.</span></li>
-          <li><b>3.6</b><span>Başqalarının şəxsi məlumatlarını paylaşmaq qadağandır.</span></li>
-          <li><b>3.7</b><span>Söhbətləri uyğun kanallarda aparın. Kanalda başqa cür göstərilməyibsə, ingilis və ya Azərbaycan dilində yazın.</span></li>
-          <li><b>3.8</b><span>Trollinq etmək və ya uçuşları və tədbirləri qəsdən pozmaq qadağandır.</span></li>
-        </ol>
-
-        <h2 id="az-t4">4. Uçuşlar və tədbirlər</h2>
-        <ol class="clauses">
-          <li><b>4.1</b><span>Uçuş zamanı Personalın (Personnel) göstərişlərinə əməl edin. Uçuş davam etdiyi müddətdə onların qərarı yekundur.</span></li>
-          <li><b>4.2</b><span>Sizə ayrılmış oturacaqda və sinifdə qalın. Ödəmədiyiniz salona keçmək qadağandır.</span></li>
-          <li><b>4.3</b><span>Uçuş vaxtları elanlar kanalında paylaşılır. Uçuşları istənilən vaxt təxirə sala, dəyişə və ya ləğv edə bilərik.</span></li>
-          <li><b>4.4</b><span>Uçuşun serveri kilidləndikdən sonra ona qoşulmaq mümkün deyil. Kilidlənmədən əvvəl serverdə olduğunuza əmin olun.</span></li>
-          <li><b>4.5</b><span>Uçuşları yazıya ala və ya yayımlaya bilərsiniz, bir şərtlə ki, videoda heç kimi təhqir etməyəsiniz.</span></li>
-        </ol>
-
-        <h2 id="az-t5">5. Alışlar və siniflər</h2>
-        <ol class="clauses">
-          <li><b>5.1</b><span>Robux ilə edilən alışlar (game pass-lar, sinif yüksəltmələri, ianələr) qətidir. Pul geri qaytarılmır.</span></li>
-          <li><b>5.2</b><span>Hər sinfə nələrin daxil olduğu <a href="#classes" data-doc="classes">Siniflər</a> səhifəsində göstərilib. İmtiyazlar istənilən vaxt dəyişdirilə, əlavə oluna və ya ləğv edilə bilər.</span></li>
-          <li><b>5.3</b><span>Blok və ya cəza sizə pulun geri qaytarılması və ya cəza müddətində imtiyazları saxlamaq hüququ vermir.</span></li>
-          <li><b>5.4</b><span>Bütün alışlar həmçinin Roblox İstifadə Şərtlərinə tabedir. Ödənişin geri çağırılması (chargeback) və ya fırıldaqçılıq daimi blokla nəticələnir.</span></li>
-        </ol>
-
-        <h2 id="az-t6">6. Moderasiya və şikayətlər</h2>
-        <p>Cəzalar adətən aşağıdakı mərhələlərlə tətbiq olunur. Nifrət nitqi, eksploit, fırıldaqçılıq və ya şəxsi məlumatların paylaşılması kimi ciddi pozuntularda mərhələləri ötürə bilərik.</p>
-        <div class="tbl">
-          <table>
-            <thead><tr><th>Mərhələ</th><th>Tədbir</th><th>Müddət</th></tr></thead>
-            <tbody>
-              <tr><td class="num">1</td><td>Şifahi xəbərdarlıq</td><td>–</td></tr>
-              <tr><td class="num">2</td><td>Yazılı xəbərdarlıq</td><td class="num">30 gün</td></tr>
-              <tr><td class="num">3</td><td>Oyunda və ya serverdə susdurma, yaxud oradan çıxarılma</td><td class="num">1 saatdan 7 günədək</td></tr>
-              <tr><td class="num">4</td><td>Müvəqqəti blok</td><td class="num">7 gündən 30 günədək</td></tr>
-              <tr><td class="num">5</td><td>Qrupdan, oyunlardan və serverdən daimi blok</td><td>Daimi</td></tr>
-            </tbody>
-          </table>
+        <div class="intro">
+          <p class="note">Başqa cür göstərilmədikdə, ingilis dilindəki versiya əsas sənəddir. Tərcümə daha asan başa düşülməsi üçün təqdim olunur.</p>
+          <p class="lead">AZAL dostcasına və hörmətli icmada uçmaq, ünsiyyət qurmaq və tədbirlərdə iştirak etmək üçün bir məkandır. Bunu qorumaq üçün bütün üzvlərdən aşağıdakı qaydalara əməl etməyi xahiş edirik. AZAL uçuşlarında, tədbirlərində, oyunlarında və ya Discord serverimizdə iştirak etməklə bu Xidmət şərtlərini qəbul etmiş olursunuz.</p>
+          <p>Bu şərtlərin pozulması AZAL İcra Şurası tərəfindən müəyyən edilən tədbirlərə, o cümlədən xəbərdarlıq, susdurma, çıxarılma, blok və qara siyahıya salınmaya səbəb ola bilər. AZAL rəhbərliyi davranışı icmaya və ya onun nüfuzuna zərər verən hər kəsə qarşı, həmin davranış burada göstərilməsə belə, tədbir görə bilər.</p>
+          <p class="note">AZAL Azərbaycan Hava Yollarından ilhamlanan, həvəskarlar tərəfindən idarə olunan Roblox qrupudur və “Azərbaycan Hava Yolları” QSC ilə əlaqəli deyil.</p>
         </div>
-        <p><mark>Şikayət vermək üçün cəzadan sonra 14 gün ərzində dəstək kanalında bilet açın.</mark> Şikayətinizə cəzanı verən şəxsdən başqası baxacaq. Hər cəzadan yalnız bir dəfə şikayət etmək olar.</p>
 
-        <h2 id="az-t7">7. Məxfilik, məzmun və dəyişikliklər</h2>
+        <h2 id="az-t1">1. Ümumi qaydalar</h2>
+        <h3>1.1 Zorakılıq və hədələr</h3>
+        <ul class="plain">
+          <li>Zorakılıq, qan və ya heyvanlara qarşı qəddarlıq əks etdirən məzmun qadağandır.</li>
+          <li>Kiməsə fiziki, emosional və ya maddi zərər vurmaqla hədələmək yolverilməzdir.</li>
+        </ul>
+        <h3>1.2 Zorbalıq və təhqir</h3>
+        <ul class="plain">
+          <li>Heç kimi alçaltmayın, utandırmayın və təhqir etməyin.</li>
+          <li>Aşağıdakılara əsaslanan ayrı-seçkilik və ya nifrət nitqi qadağandır: irq, etnik və ya milli mənşə; din; gender kimliyi və ya cinsi oriyentasiya; yaş, əlillik və ya sağlamlıq vəziyyəti.</li>
+          <li>Spam etməyin və yanıltıcı məzmun paylaşmayın.</li>
+        </ul>
+        <h3>1.3 Zərərli məzmun</h3>
+        <ul class="plain">
+          <li>Özünə zərər vurmağı, qidalanma pozuntularını və ya intiharı tərifləyən və ya təşviq edən məzmun, eləcə də kimisə özünə zərər vurmağa təşviq etmək qadağandır.</li>
+        </ul>
+        <h3>1.4 Məxfilik və təqlid</h3>
+        <ul class="plain">
+          <li>Heç kimin şəxsi məlumatlarını, məsələn, üz şəkillərini, sənədlərini və ya digər sosial şəbəkə linklərini paylaşmayın.</li>
+          <li>Personal (Personnel) və ya real Azərbaycan Hava Yolları əməkdaşları da daxil olmaqla, heç kimi təqlid etməyin.</li>
+        </ul>
+        <h3>1.5 Qanunsuz davranış</h3>
+        <ul class="plain">
+          <li>Fırıldaqçılıq, cinsi xidmət təklif etmək və ya istəmək, yaxud azyaşlıları hər hansı formada istismar etmək daxil olmaqla, istənilən qanunsuz fəaliyyət qadağandır. Bu, dərhal tədbir görülməsinə səbəb olur və müvafiq orqanlara bildirilə bilər.</li>
+        </ul>
+        <h3>1.6 Cinsi məzmun</h3>
+        <ul class="plain">
+          <li>Cinsi və ya açıq-saçıq məzmun qadağandır. Azyaşlıları seksuallaşdıran istənilən məzmun daimi qara siyahıya salınma və müvafiq orqanlara məlumat verilməsi ilə nəticələnir.</li>
+        </ul>
+
+        <h2 id="az-t2">2. Roblox qaydaları</h2>
         <ol class="clauses">
-          <li><b>7.1</b><span>Biz yalnız qrupu idarə etmək üçün lazım olan məlumatları saxlayırıq: Roblox və Discord istifadəçi adlarınız və ID-ləriniz, sinfiniz və moderasiya tarixçəniz. Biz heç vaxt parol, real ad və ya ünvan istəmirik.</span></li>
-          <li><b>7.2</b><span>AZAL loqoları, emojiləri, bannerləri və digər dizaynları AZAL-a məxsusdur və icazəsiz istifadə edilə bilməz.</span></li>
-          <li><b>7.3</b><span>Azərbaycan Hava Yollarının adları və nişanları onların sahiblərinə məxsusdur. AZAL onlardan yalnız həvəskar ehtiramı kimi, heç bir kommersiya iddiası olmadan istifadə edir.</span></li>
-          <li><b>7.4</b><span>Bu şərtləri istənilən vaxt yeniləyə bilərik. Dəyişikliklər elanlar kanalında paylaşılır. Qrupda qalmağınız onları qəbul etdiyiniz mənasına gəlir.</span></li>
+          <li><b>2.1</b><span>Uçuş zamanı Personalın göstərişlərinə əməl edin. Uçuş davam etdiyi müddətdə onların qərarı yekundur.</span></li>
+          <li><b>2.2</b><span>Xətalardan istifadə etməklə və ya Personalın arxasınca getməklə qadağan olunmuş ərazilərə daxil olmağa çalışmayın. Xətaları bizə bildirin.</span></li>
+          <li><b>2.3</b><span>Yalnız Personal üçün nəzərdə tutulmuş avadanlıqdan istifadə etməyin.</span></li>
+          <li><b>2.4</b><span>Öz sinfinizdə qalın. Almadığınız sinfin yerlərində oturmayın və onun xidmətlərindən istifadə etməyin.</span></li>
+          <li><b>2.5</b><span>Yüksəltmə dilənməyin.</span></li>
+          <li><b>2.6</b><span>Trollinq etmək və uçuşları pozmaq qadağandır.</span></li>
+          <li><b>2.7</b><span>Eksploit heç bir halda qadağandır.</span></li>
+          <li><b>2.8</b><span>Terrorizm və digər təhqiredici rol oyunları qadağandır.</span></li>
+          <li><b>2.9</b><span>Söhbət filtrindən yan keçməyin və söhbəti spamlamayın.</span></li>
+          <li><b>2.10</b><span>Yersiz avatar və geyimlərə icazə verilmir və minişdən əvvəl onları dəyişməyiniz istənilə bilər. AZAL rəhbərliyi burada göstərilməsə belə avatarın yersiz olduğuna qərar verə bilər.</span></li>
+          <li><b>2.11</b><span>Uçuşun serveri kilidləndikdən sonra ona qoşulmaq mümkün deyil.</span></li>
+          <li><b>2.12</b><span><a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">Roblox İstifadə Şərtlərinə</a> əməl etməlisiniz.</span></li>
+        </ol>
+
+        <h2 id="az-t3">3. Discord qaydaları</h2>
+        <ol class="clauses">
+          <li><b>3.1</b><span>Hər kanaldan təyinatı üzrə istifadə edin.</span></li>
+          <li><b>3.2</b><span>Səbəbsiz kimisə ping etməyin, o cümlədən “ghost ping” etməyin. Sualınız varsa, dəstək kanalında bilet açın.</span></li>
+          <li><b>3.3</b><span>Səsli kanallarda təhrif olunmuş, əsəbiləşdirici və ya çox yüksək səslər səsləndirməyin.</span></li>
+          <li><b>3.4</b><span>Botlardan sui-istifadə etməyin.</span></li>
+          <li><b>3.5</b><span>Sızmalar, eksploitlər və ya digər zərərli fəaliyyətlərdən bəhs etməyin.</span></li>
+          <li><b>3.6</b><span>Dram yaratmayın və ona qoşulmayın.</span></li>
+          <li><b>3.7</b><span>Siyasi və dini müzakirələrə icazə verilmir.</span></li>
+          <li><b>3.8</b><span>Yalnız ingilis və Azərbaycan dillərindən istifadə etmək olar.</span></li>
+          <li><b>3.9</b><span>AZAL Discord serverinə qoşulmaq üçün ən azı 13 yaşınız olmalıdır.</span></li>
+          <li><b>3.10</b><span><a href="https://discord.com/terms" target="_blank" rel="noopener">Discord Xidmət Şərtlərinə</a> əməl etməlisiniz.</span></li>
         </ol>
       </div>
     </article>
 
-    <!-- ===================== CLASSES ===================== -->
+    <!-- ===================== CLASSES (TRAVEL GUIDE) ===================== -->
     <article id="classes" hidden>
       <div lang="en">
-        <p class="lead">Every AZAL passenger flies Economy Class for free. For a more comfortable journey, upgrade to Business Class for a better seat and extra perks on every flight.</p>
+        <p class="lead">Browse our Travel Guide to see what each AZAL class offers. Every passenger flies Economy for free, and Business Class takes your journey further.</p>
 
-        <h2>Compare classes</h2>
-        <div class="tbl">
-          <table>
-            <thead><tr><th></th><th><span class="dot" style="background:#C27C4E"></span>Economy Class</th><th><span class="dot" style="background:#D4B26A"></span>Business Class</th></tr></thead>
-            <tbody>
-              <tr><th>Price</th><td>Free</td><td><mark>XXX Robux</mark> game pass, one-time</td></tr>
-              <tr><th>Cabin</th><td>Main cabin</td><td><mark>Front cabin</mark></td></tr>
-              <tr><th>Seat</th><td>Standard seat</td><td><mark>Lie-flat seat with extra legroom</mark></td></tr>
-              <tr><th>Boarding</th><td>After Business Class</td><td>Priority boarding</td></tr>
-              <tr><th>Lounge</th><td>–</td><td><mark>AZAL Business Lounge</mark></td></tr>
-              <tr><th>On board</th><td>Drinks and snack</td><td><mark>Full meal service and welcome drink</mark></td></tr>
-              <tr><th>Discord</th><td>Economy Class role</td><td>Business Class role, <mark>Business-only chat and early event news</mark></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Getting your class</h2>
-        <ol class="steps">
-          <li>Join the AZAL Roblox group. You get Economy Class straight away.</li>
-          <li>To upgrade, buy the Business Class game pass on our game page.</li>
-        </ol>
-
-        <h2>Conditions</h2>
+        <h2><span class="dot" style="background:#D4B26A"></span>AZAL Business</h2>
+        <p>Fly AZAL Business and arrive more relaxed than ever. From a quicker check-in to a seat at the front of the cabin, every part of your journey is more comfortable, with attentive service and dishes inspired by Azerbaijani cuisine.</p>
+        <p class="price">One-time game pass, priced at <mark>XXX R$</mark></p>
+        <h3>AZAL Business perks</h3>
         <ul class="plain">
+          <li>Access to AZAL Business check-in</li>
+          <li>Lounge access</li>
+          <li>Fast Track through security</li>
+          <li>Priority boarding, before Economy passengers</li>
+          <li>A seat in our spacious Business cabin</li>
+          <li>A welcome drink and a hot towel before take-off</li>
+          <li>An extended menu with Azerbaijani dishes</li>
+          <li>The exclusive Business Class role</li>
+          <li>Access to a Business-only channel in our Discord server</li>
+        </ul>
+        <p class="note"><mark>Check these perks match the game.</mark></p>
+
+        <h2><span class="dot" style="background:#C27C4E"></span>AZAL Economy</h2>
+        <p>Every AZAL journey starts in Economy. Join our Roblox group and you are ready to fly, with a comfortable seat and friendly service on every flight.</p>
+        <p class="price">Free with the AZAL Roblox group</p>
+        <h3>AZAL Economy perks</h3>
+        <ul class="plain">
+          <li>Standard check-in</li>
+          <li>A seat in our Economy cabin</li>
+          <li>Drinks and a snack on board</li>
+          <li>The Economy Class role</li>
+        </ul>
+
+        <h2>Good to know</h2>
+        <ul class="plain">
+          <li>Robux purchases are final. We do not give refunds.</li>
           <li>Your class is tied to your Roblox account and cannot be transferred, gifted or sold.</li>
-          <li>Purchases are final, as set out in the <a href="#terms" data-doc="terms">Terms of Service</a>.</li>
-          <li>Sitting in a cabin you have not paid for will get you moved. Repeated cases count as a rule break.</li>
+          <li>Perks may change, be added or be removed at any time.</li>
+          <li>Sitting in a cabin you have not paid for will get you moved.</li>
         </ul>
       </div>
 
       <div lang="az" hidden>
-        <p class="lead">AZAL-ın bütün sərnişinləri Ekonom sinifdə pulsuz uçur. Daha rahat səyahət üçün Biznes sinfə keçin və hər uçuşda daha yaxşı oturacaq və əlavə imtiyazlardan yararlanın.</p>
+        <p class="lead">Səyahət bələdçimizlə hər AZAL sinfinin nələr təqdim etdiyini öyrənin. Hər sərnişin Ekonom sinifdə pulsuz uçur, Biznes sinif isə səyahətinizi daha da rahat edir.</p>
 
-        <h2>Sinifləri müqayisə edin</h2>
-        <div class="tbl">
-          <table>
-            <thead><tr><th></th><th><span class="dot" style="background:#C27C4E"></span>Ekonom sinif</th><th><span class="dot" style="background:#D4B26A"></span>Biznes sinif</th></tr></thead>
-            <tbody>
-              <tr><th>Qiymət</th><td>Pulsuz</td><td><mark>XXX Robux</mark>, birdəfəlik game pass</td></tr>
-              <tr><th>Salon</th><td>Əsas salon</td><td><mark>Ön salon</mark></td></tr>
-              <tr><th>Oturacaq</th><td>Standart oturacaq</td><td><mark>Ayaqlar üçün əlavə yeri olan, tam açılan oturacaq</mark></td></tr>
-              <tr><th>Miniş</th><td>Biznes sinifdən sonra</td><td>Prioritet miniş</td></tr>
-              <tr><th>Gözləmə zalı</th><td>–</td><td><mark>AZAL Biznes zalı</mark></td></tr>
-              <tr><th>Təyyarədə</th><td>İçki və qəlyanaltı</td><td><mark>Tam yemək xidməti və qarşılama içkisi</mark></td></tr>
-              <tr><th>Discord</th><td>Economy Class rolu</td><td>Business Class rolu, <mark>yalnız Biznes sərnişinləri üçün söhbət kanalı və tədbirlər barədə erkən xəbərlər</mark></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h2>Sinfinizi necə əldə etmək olar</h2>
-        <ol class="steps">
-          <li>AZAL Roblox qrupuna qoşulun. Ekonom sinif sizə dərhal verilir.</li>
-          <li>Yüksəltmək üçün oyun səhifəmizdən Biznes sinif game pass-ını alın.</li>
-        </ol>
-
-        <h2>Şərtlər</h2>
+        <h2><span class="dot" style="background:#D4B26A"></span>AZAL Biznes</h2>
+        <p>AZAL Biznes ilə uçun və təyinat yerinizə həmişəkindən daha dincəlmiş halda çatın. Daha sürətli qeydiyyatdan salonun ön hissəsindəki oturacağa qədər səyahətinizin hər mərhələsi diqqətli xidmət və Azərbaycan mətbəxindən ilhamlanan yeməklərlə daha rahat olur.</p>
+        <p class="price">Birdəfəlik game pass, qiyməti <mark>XXX R$</mark></p>
+        <h3>AZAL Biznes imtiyazları</h3>
         <ul class="plain">
+          <li>AZAL Biznes qeydiyyat zonasından istifadə</li>
+          <li>Gözləmə zalından istifadə</li>
+          <li>Təhlükəsizlik yoxlamasından sürətli keçid (Fast Track)</li>
+          <li>Ekonom sərnişinlərdən əvvəl prioritet miniş</li>
+          <li>Geniş Biznes salonumuzda oturacaq</li>
+          <li>Uçuşdan əvvəl qarşılama içkisi və isti dəsmal</li>
+          <li>Azərbaycan yeməkləri ilə genişləndirilmiş menyu</li>
+          <li>Eksklüziv Business Class rolu</li>
+          <li>Discord serverimizdə yalnız Biznes sərnişinləri üçün kanal</li>
+        </ul>
+        <p class="note"><mark>Bu imtiyazların oyuna uyğun olduğunu yoxlayın.</mark></p>
+
+        <h2><span class="dot" style="background:#C27C4E"></span>AZAL Ekonom</h2>
+        <p>Hər AZAL səyahəti Ekonom sinifdən başlayır. Roblox qrupumuza qoşulun və hər uçuşda rahat oturacaq və mehriban xidmətlə uçmağa hazır olun.</p>
+        <p class="price">AZAL Roblox qrupu ilə pulsuz</p>
+        <h3>AZAL Ekonom imtiyazları</h3>
+        <ul class="plain">
+          <li>Standart qeydiyyat</li>
+          <li>Ekonom salonumuzda oturacaq</li>
+          <li>Təyyarədə içki və qəlyanaltı</li>
+          <li>Economy Class rolu</li>
+        </ul>
+
+        <h2>Bilməli olduqlarınız</h2>
+        <ul class="plain">
+          <li>Robux ilə edilən alışlar qətidir. Pul geri qaytarılmır.</li>
           <li>Sinfiniz Roblox hesabınıza bağlıdır və başqasına ötürülə, hədiyyə edilə və ya satıla bilməz.</li>
-          <li>Alışlar <a href="#terms" data-doc="terms">Xidmət şərtlərində</a> göstərildiyi kimi qətidir.</li>
-          <li>Ödəmədiyiniz salonda otursanız, yeriniz dəyişdiriləcək. Təkrar hallar qayda pozuntusu sayılır.</li>
+          <li>İmtiyazlar istənilən vaxt dəyişdirilə, əlavə oluna və ya ləğv edilə bilər.</li>
+          <li>Ödəmədiyiniz salonda otursanız, yeriniz dəyişdiriləcək.</li>
         </ul>
       </div>
     </article>
@@ -398,7 +416,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <div><dt>How do I get Business Class?</dt><dd>Buy the Business Class game pass on our game page. See the <a href="#classes" data-doc="classes">Classes</a> page for what's included.</dd></div>
           <div><dt>Can I get a refund?</dt><dd>No. All Robux purchases are final.</dd></div>
           <div><dt>How do I report someone?</dt><dd>Open a ticket in the support channel of our Discord server, with screenshots or a clip if you have them.</dd></div>
-          <div><dt>I was punished and think it was unfair. What can I do?</dt><dd>Open a ticket in the support channel within <mark>14 days</mark> of the punishment, and we'll review it.</dd></div>
+          <div><dt>I was punished and think it was unfair. What can I do?</dt><dd>Open a ticket in the support channel and explain what happened. We'll take another look.</dd></div>
           <div><dt>How can I join the AZAL team?</dt><dd>When applications open, we post them in the announcements channel.</dd></div>
           <div><dt>Can my group partner with AZAL?</dt><dd>Open a partnership ticket in our Discord server.</dd></div>
           <div><dt>What languages can I use?</dt><dd>English or Azerbaijani, unless a channel says otherwise.</dd></div>
@@ -413,7 +431,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
           <div><dt>Biznes sinfi necə əldə edə bilərəm?</dt><dd>Oyun səhifəmizdən Biznes sinif game pass-ını alın. Nələrin daxil olduğunu <a href="#classes" data-doc="classes">Siniflər</a> səhifəsində görə bilərsiniz.</dd></div>
           <div><dt>Pulumu geri ala bilərəmmi?</dt><dd>Xeyr. Robux ilə edilən bütün alışlar qətidir.</dd></div>
           <div><dt>Kimdənsə necə şikayət edə bilərəm?</dt><dd>Discord serverimizin dəstək kanalında bilet açın. Varsa, ekran görüntüləri və ya video əlavə edin.</dd></div>
-          <div><dt>Cəzalandırılmışam və bunun ədalətsiz olduğunu düşünürəm. Nə edə bilərəm?</dt><dd>Cəzadan sonra <mark>14 gün</mark> ərzində dəstək kanalında bilet açın, biz ona yenidən baxacağıq.</dd></div>
+          <div><dt>Cəzalandırılmışam və bunun ədalətsiz olduğunu düşünürəm. Nə edə bilərəm?</dt><dd>Dəstək kanalında bilet açın və nə baş verdiyini izah edin. Biz yenidən baxacağıq.</dd></div>
           <div><dt>AZAL komandasına necə qoşula bilərəm?</dt><dd>Müraciətlər açıldıqda elanlar kanalında paylaşırıq.</dd></div>
           <div><dt>Qrupum AZAL ilə tərəfdaş ola bilərmi?</dt><dd>Discord serverimizdə tərəfdaşlıq bileti açın.</dd></div>
           <div><dt>Hansı dillərdən istifadə edə bilərəm?</dt><dd>Kanalda başqa cür göstərilməyibsə, ingilis və ya Azərbaycan dilindən.</dd></div>
@@ -454,7 +472,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
 (function () {
   var docs = {
     terms: { en: 'Terms of Service', az: 'Xidmət şərtləri' },
-    classes: { en: 'Classes', az: 'Siniflər' },
+    classes: { en: 'Travel Guide', az: 'Səyahət bələdçisi' },
     partners: { en: 'Partners', az: 'Tərəfdaşlar' },
     faq: { en: 'Frequently asked questions', az: 'Tez-tez verilən suallar' },
     social: { en: 'Social links', az: 'Sosial şəbəkələr' }
