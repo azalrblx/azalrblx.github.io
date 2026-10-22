@@ -65,7 +65,9 @@ a:hover { color: var(--navy); }
 .help { margin-top: 24px; font-size: 13px; color: var(--sub); }
 
 .doc { min-width: 0; max-width: 700px; }
-.draft { background: var(--mark); padding: 10px 14px; font-size: 13.5px; margin: 0 0 22px; }
+.notice { background: var(--mark); padding: 10px 14px; font-size: 13.5px; margin: 0 0 22px; }
+.notice b { margin-right: 6px; }
+.notice a { color: var(--navy); }
 .doc .lead { font-size: 16px; margin: 0 0 24px; }
 .doc h2 { font-size: 19px; color: var(--navy); margin: 30px 0 8px; font-weight: 700; scroll-margin-top: 16px; }
 .doc .lead + h2, .doc .intro + h2 { margin-top: 0; }
@@ -156,7 +158,10 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
   </aside>
 
   <main class="doc">
-    <p class="draft" data-en="Draft. Highlighted details still need to be confirmed by the AZAL team." data-az="Qaralama. Vurğulanmış məlumatlar hələ AZAL komandası tərəfindən təsdiqlənməlidir.">Draft. Highlighted details still need to be confirmed by the AZAL team.</p>
+    <p class="notice">
+      <span lang="en"><b>Notice</b> Flight times are announced in our Discord server. Join from our <a href="#social" data-doc="social">Socials</a> page so you never miss a flight.</span>
+      <span lang="az" hidden><b>Bildiriş</b> Uçuş vaxtları Discord serverimizdə elan olunur. Heç bir uçuşu buraxmamaq üçün <a href="#social" data-doc="social">Sosial şəbəkələr</a> səhifəsindən qoşulun.</span>
+    </p>
 
     <!-- ===================== TERMS ===================== -->
     <article id="terms">
