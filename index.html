@@ -122,6 +122,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
       <a href="#partners" data-doc="partners" data-en="Partners" data-az="Tərəfdaşlar">Partners</a>
       <a href="#faq" data-doc="faq" data-en="FAQ" data-az="Suallar">FAQ</a>
       <a href="#social" data-doc="social" data-en="Socials" data-az="Sosial şəbəkələr">Socials</a>
+      <a href="#privacy" data-doc="privacy" data-en="Privacy" data-az="Məxfilik">Privacy</a>
       <span class="langs" role="group" aria-label="Language">
         <button type="button" id="lang-en" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" id="lang-az" data-lang="az" aria-pressed="false">AZ</button>
@@ -153,6 +154,7 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
       <li><a href="#partners" data-doc="partners" data-en="Partners" data-az="Tərəfdaşlar">Partners</a></li>
       <li><a href="#faq" data-doc="faq" data-en="FAQ" data-az="Tez-tez verilən suallar">FAQ</a></li>
       <li><a href="#social" data-doc="social" data-en="Socials" data-az="Sosial şəbəkələr">Socials</a></li>
+      <li><a href="#privacy" data-doc="privacy" data-en="Privacy Policy" data-az="Məxfilik siyasəti">Privacy Policy</a></li>
     </ul>
     <p class="help" data-en="Questions? Open a ticket in the support channel of our Discord server, discord.gg/azal." data-az="Sualınız var? Discord serverimizin (discord.gg/azal) dəstək kanalında bilet açın.">Questions? Open a ticket in the support channel of our Discord server, discord.gg/azal.</p>
   </aside>
@@ -481,6 +483,50 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
         </ul>
       </div>
     </article>
+
+    <!-- ===================== PRIVACY ===================== -->
+    <article id="privacy" hidden>
+      <div lang="en">
+        <p class="lead">This policy explains what the AZAL Support bot collects when you message it, and how we use it.</p>
+        <h2>1. What we collect</h2>
+        <ul class="plain">
+          <li>Your Discord user ID, username and avatar</li>
+          <li>Your messages, attachments and when they were sent</li>
+          <li>A record of when your ticket was opened, closed or transferred</li>
+        </ul>
+        <h2>2. How we use it</h2>
+        <p>Only to answer your request and keep a record of support conversations.</p>
+        <h2>3. Who can see it</h2>
+        <p>AZAL Personnel with access to support tickets, and the person who hosts the bot. Ticket logs are stored in a MongoDB database. We never sell or share your data, unless the law or Discord Trust &amp; Safety requires it.</p>
+        <h2>4. How long we keep it</h2>
+        <p>Ticket logs are kept until you ask us to delete them.</p>
+        <h2>5. Deleting your data</h2>
+        <p>Message AZAL Support or open a ticket to ask. We will delete your details and messages within 14 days.</p>
+        <h2>6. Changes</h2>
+        <p>We may update this policy. Changes are posted in our announcements channel.</p>
+        <p class="note">AZAL Support runs on <a href="https://docs.modmail.dev" target="_blank" rel="noopener">Modmail</a>. This policy is based on the <a href="https://docs.modmail.dev/frequently-asked-questions/privacy-policy" target="_blank" rel="noopener">Modmail privacy policy</a>.</p>
+      </div>
+      <div lang="az" hidden>
+        <p class="lead">Bu siyasət AZAL Dəstək botuna mesaj yazdığınız zaman hansı məlumatların toplandığını və onlardan necə istifadə etdiyimizi izah edir.</p>
+        <h2>1. Topladığımız məlumatlar</h2>
+        <ul class="plain">
+          <li>Discord istifadəçi ID-niz, istifadəçi adınız və avatarınız</li>
+          <li>Mesajlarınız, əlavələriniz və onların göndərilmə vaxtı</li>
+          <li>Biletinizin nə vaxt açıldığı, bağlandığı və ya ötürüldüyü barədə qeyd</li>
+        </ul>
+        <h2>2. Məlumatlardan necə istifadə edirik</h2>
+        <p>Yalnız müraciətinizə cavab vermək və dəstək yazışmalarının qeydini saxlamaq üçün.</p>
+        <h2>3. Məlumatları kim görə bilər</h2>
+        <p>Dəstək biletlərinə çıxışı olan AZAL Personalı və botu idarə edən şəxs. Bilet qeydləri MongoDB verilənlər bazasında saxlanılır. Qanun və ya Discord Trust &amp; Safety tələb etmədikcə, məlumatlarınızı heç vaxt satmırıq və başqaları ilə paylaşmırıq.</p>
+        <h2>4. Məlumatları nə qədər saxlayırıq</h2>
+        <p>Bilet qeydləri siz onların silinməsini istəyənə qədər saxlanılır.</p>
+        <h2>5. Məlumatlarınızın silinməsi</h2>
+        <p>Bunun üçün AZAL Dəstəyə mesaj yazın və ya bilet açın. Məlumatlarınızı və mesajlarınızı 14 gün ərzində siləcəyik.</p>
+        <h2>6. Dəyişikliklər</h2>
+        <p>Bu siyasəti yeniləyə bilərik. Dəyişikliklər elanlar kanalımızda paylaşılır.</p>
+        <p class="note">AZAL Dəstək <a href="https://docs.modmail.dev" target="_blank" rel="noopener">Modmail</a> üzərində işləyir. Bu siyasət <a href="https://docs.modmail.dev/frequently-asked-questions/privacy-policy" target="_blank" rel="noopener">Modmail məxfilik siyasətinə</a> əsaslanır.</p>
+      </div>
+    </article>
   </main>
 </div>
 
@@ -498,7 +544,8 @@ footer .wrap { padding-block: 18px 22px; display: flex; justify-content: space-b
     classes: { en: 'Travel Guide', az: 'Səyahət bələdçisi' },
     partners: { en: 'Partners', az: 'Tərəfdaşlar' },
     faq: { en: 'Frequently asked questions', az: 'Tez-tez verilən suallar' },
-    social: { en: 'Social links', az: 'Sosial şəbəkələr' }
+    social: { en: 'Social links', az: 'Sosial şəbəkələr' },
+    privacy: { en: 'Privacy Policy', az: 'Məxfilik siyasəti' }
   };
   var state = { doc: 'terms', lang: 'en' };
 
